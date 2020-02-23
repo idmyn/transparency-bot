@@ -6,6 +6,8 @@ authors = ["idmyn <hello@davidmyno.rs>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+pillow = "^7.0.0"
+python-telegram-bot = "^12.4.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
