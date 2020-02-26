@@ -11,6 +11,7 @@ bot = "transparency_bot.bot:run"
 python = "^3.8"
 pillow = "^7.0.0"
 python-telegram-bot = "^12.4.2"
+requests = "^2.23.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
