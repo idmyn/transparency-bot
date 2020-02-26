@@ -1,8 +1,0 @@
-README.rst
-setup.py
-transparency_bot/__init__.py
-transparency_bot.egg-info/PKG-INFO
-transparency_bot.egg-info/SOURCES.txt
-transparency_bot.egg-info/dependency_links.txt
-transparency_bot.egg-info/requires.txt
-transparency_bot.egg-info/top_level.txt

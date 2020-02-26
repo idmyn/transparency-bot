@@ -1,2 +1,0 @@
-pillow<8.0.0,>=7.0.0
-python-telegram-bot<13.0.0,>=12.4.2

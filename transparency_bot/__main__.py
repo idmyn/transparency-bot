@@ -1,9 +1,5 @@
-from . import img
-
-
-def run():
-    print(img.hello())
+from . import bot
 
 
 if __name__ == '__main__':
-    run()
+    bot.run()

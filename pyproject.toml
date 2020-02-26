@@ -4,6 +4,9 @@ version = "0.1.0"
 description = ""
 authors = ["idmyn <hello@davidmyno.rs>"]
 
+[tool.poetry.scripts]
+bot = "transparency_bot.bot:run"
+
 [tool.poetry.dependencies]
 python = "^3.8"
 pillow = "^7.0.0"
