@@ -1,2 +1,18 @@
-def hello():
-    return "hello!"
+from PIL import Image
+from io import BytesIO
+
+
+def white_to_transparent(raw_image):
+    img = Image.open(BytesIO(raw_image))
+    img = img.convert("RGBA")
+    datas = img.getdata()
+
+    newData = []
+    for item in datas:
+        if item[0] == 255 and item[1] == 255 and item[2] == 255:
+            newData.append((255, 255, 255, 0))
+        else:
+            newData.append(item)
+
+    img.putdata(newData)
+    img.save("img2.png", "PNG")
