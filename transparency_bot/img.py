@@ -14,5 +14,7 @@ def white_to_transparent(raw_image):
         else:
             newData.append(item)
 
+    bytes = BytesIO()
     img.putdata(newData)
-    img.save("img2.png", "PNG")
+    img.save(bytes, "PNG")
+    return bytes

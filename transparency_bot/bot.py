@@ -5,6 +5,7 @@ from . import img
 token = open('token.txt', 'r').read().rstrip()
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
+whitelist = ['idmyn']
 
 
 def start(update, context):
@@ -18,6 +19,12 @@ def echo(update, context):
 
 
 def image(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id,
+                             text="nice pic")
+
+    if update.effective_chat.username not in whitelist:
+        return  # I don't want to process images from strangers
+
     biggestImage = max(update.message.photo, key=lambda x:x['file_size'])
     # ^ https://stackoverflow.com/a/5326622/10314380
     file_id = biggestImage.file_id
@@ -28,10 +35,11 @@ def image(update, context):
     file_url = 'https://api.telegram.org/file/bot{0}/{1}'.format(token, file_path)
     image = requests.get(file_url)
 
-    img.white_to_transparent(image.content)
-
-    context.bot.send_message(chat_id=update.effective_chat.id,
-                             text="nice pic")
+    bytes = img.white_to_transparent(image.content)
+    bytes.name = "img.png"
+    bytes.seek(0)
+    context.bot.send_document(chat_id=update.effective_chat.id,
+                              document=bytes)
 
 
 def run():
