@@ -1,11 +1,20 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+import os
 import requests
-import logging
 from . import img
-token = open('token.txt', 'r').read().rstrip()
+import logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
 
+
+def get_token():
+    if os.getenv('DEPLOY') == 'docker':
+        return os.getenv('TOKEN')
+    else:
+        return open('token.txt', 'r').read().rstrip()
+
+
+token = get_token()
 whitelist = ['idmyn']
 
 

@@ -3,7 +3,8 @@
 .git-crypt
 .gitattributes
 .pytest_cache
-tests
 pyproject.toml
 poetry.lock
 **/__pycache__/
+tests
+token.txt

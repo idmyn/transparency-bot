@@ -12,4 +12,4 @@ commands
 
   poetry run bot
   poetry run pytest
-  poetry run export  # writes dependencies to requirements.txt for docker image
+  poetry run export  # writes dependencies to requirements.txt for pip in Dockerfile
