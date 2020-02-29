@@ -8,7 +8,8 @@ white pixels with transparency, and returns the modified image to the sender.
 commands
 --------
 
-::
+.. code:: bash
 
   poetry run bot
   poetry run pytest
+  poetry run export  # writes dependencies to requirements.txt for docker image

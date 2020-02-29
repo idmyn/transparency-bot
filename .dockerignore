@@ -1,0 +1,9 @@
+.git
+.gitignore
+.git-crypt
+.gitattributes
+.pytest_cache
+tests
+pyproject.toml
+poetry.lock
+**/__pycache__/

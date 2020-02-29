@@ -6,6 +6,7 @@ authors = ["idmyn <hello@davidmyno.rs>"]
 
 [tool.poetry.scripts]
 bot = "transparency_bot.bot:run"
+export = "poetry export -f requirements.txt -o requirements.txt"
 
 [tool.poetry.dependencies]
 python = "^3.8"
