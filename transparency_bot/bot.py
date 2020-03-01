@@ -15,12 +15,12 @@ def get_token():
 
 
 token = get_token()
-whitelist = ['idmyn']
+whitelist = ['idmyn', 'bubbin']
 
 
 def start(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id,
-                             text="I'm a bot, send me pics!")
+                             text="I'm a bot, send me pics! test")
 
 
 def image(update, context):
