@@ -20,7 +20,7 @@ whitelist = ['idmyn', 'bubbin']
 
 def start(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id,
-                             text="I'm a bot, send me pics! test")
+                             text="I'm a bot, send me pics!")
 
 
 def image(update, context):
